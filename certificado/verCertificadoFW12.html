@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function lerNome() {
+            nomeCursista = localStorage.getItem("nome")
+            document.getElementById("nomeCursista").innerHTML = nomeCursista
+        }
+        
+        function lerPerc() {
+            perc = localStorage.getItem("perc")
+            document.getElementById("perc").innerHTML = perc
+        }
+
+    </script>
+    <style>
+        @font-face {
+            font-family: arch;
+            src: url(../fonte/ARCHITRN.TTF);
+        }
+
+        body {
+            background-color: #cbdaf7;
+
+        }
+
+        .certificado {
+            background-image: url(../certificado/certificado.png);
+            background-repeat: no-repeat;
+            margin: auto;
+            width: 960px;
+            height: 720px;
+            position: relative;
+            float: center;
+        }
+
+        p.nome {
+            font-family: arch;
+            font-style: italic;
+            position: absolute;
+            top: 167px;
+            left: 173px;
+            font-size: 56px;
+            width: 740px;
+            text-align: center;
+        }
+
+        p.percCert {
+            font-family: arch;
+            font-style: italic;
+            position: absolute;
+            top: 307px;
+            left: 176px;
+            font-size: 25px;
+            width: 740px;
+            text-align: center;
+        }
+
+        .disciplina {
+            font-family: arch;
+            position: absolute;
+            top: 354px;
+            left: 266px;
+            font-size: 40px;
+            width: 580px;
+            text-align: center;
+            background-image: url(../imagens/milky-way-2695569_640.jpg);
+            color: white;
+            padding: 7px;
+            border-radius: 10px 0px 10px 10px;
+            box-shadow: 2px 3px 10px rgb(47, 103, 211);
+        }
+
+    </style>
+</head>
+
+<body onload="lerNome(), lerPerc()">
+    <div class="certificado">
+        <p id="nomeCursista" class="nome"></p>
+        <p id="perc" class="percCert"></p>
+        <p class="disciplina">Fundamentoas de Web Design 1 - Aula 2</p>
+    </div>
+</body>
+
+</html>

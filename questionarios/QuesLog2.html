@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Skynet Cursos Online | Lapidando conhecimentos</title>
+    <link rel="stylesheet" href="../estilos/questoes.css" type="text/css">
+    <link rel="stylesheet" href="../estilos/responsivo.css" type="text/css">
+    <script>
+        function armazenarRespostas() {
+            questoesMarcadas = 0;
+            nroQuestoes = 5;
+
+
+            for (nroQ = 1; nroQ < (nroQuestoes + 1); nroQ++) {
+                questao = document.getElementsByName("questao" + nroQ)
+                for (i = 0; i < questao.length; i++) {
+                    if (questao[i].checked == true) {
+                        questoesMarcadas++;
+                        localStorage.setItem("questao" + nroQ, i + 1);
+                        break;
+                    }
+                }
+            }
+            if (questoesMarcadas == nroQuestoes)
+                window.open("corrigirQuestoesLog2.html", "_self");
+            else
+                alert("É necessário marcar todas as questões ...")
+        }
+
+        function MM_openBrWindow(theUrl, winName, features) {
+            window.open(theUrl, winName, features);
+        }
+
+    </script>
+
+    <style>
+        spam {
+            color: #ff4949;
+            font-size: 100%;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- CABEÇALHO DA PÁGINA -->
+    <header>
+        <div class="tamanho">
+            <li class="left"><a href="../index.html">Home</a></li>
+
+            <nav class="right">
+                <ul>
+                    <li><a href="../index.html#cursos">Cursos</a></li>
+                    <li><a href="../index.html#somos">Quem Somos</a></li>
+                    <li><a href="../index.html#opinioes">Opiniões</a></li>
+                    <li><a href="javascript:void(0)" onClick="MM_openBrWindow('../faleconosco.html','','scrollbars=no, width=450, height=460, left=0, top=0')">Fale Conosco</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <section>
+        <!-- Questionário -->
+        <article>
+            <h1>Exercicios de Logica de programação</h1>
+            <h3>2° Video Aula</h3>
+        </article>
+        <div class="tamanho">
+            <div class="line">
+                <p class="cursos">Agora que você assistiu outra video-aula é a hora de testar seus conhecimentos novamente, depois de responder esse questionário voce terá a change de conseguir mais um certificado! Para isto basta acertar 60% das questões!</p>
+                <p class="cursos">Boa sorte e bons estudos!</p>
+            </div>
+            <div class="line">
+                <div class="col-g-12">
+
+                    <form>
+                        <p class="enunciado">1. De acordo com nossa video aula quantas são as estruturas de repetição citadas (que existem): </p>
+                        <label class="alternativas"><input type="radio" name="questao1"> a)	... 4.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao1" > b) ... 3.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao1" > c) ... 2.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao1"> d)	... 1.</label><br>
+
+                        <p class="enunciado">2. Marque a alternativa correta.<br> A estrutura WHILE é comumente utilizada quando:
+                        </p>
+                        <label class="alternativas"><input type="radio" name="questao2" > a) Sabemos o numero de repetições de comandos que precisamos executar no programa.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao2" > b) Não sabemos o numero de repetições de comandos que precisamos executar no programa.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao2">c) Quando precisamos executar uma linha de comando uma única vez.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao2" > d) Quando precisamos estabelecer um numero fixo para que duas ou mais linhas, somente, sejam executadas.</label><br>
+
+                        <p class="enunciado">3. Marque verdadeiro ou falso de acordo com a afirmação: </p>
+                        <p>"Ao inserir uma estrutura de repetição em um programa é possível que a repetição seja infinita quando não for estabelecida uma condição ou parâmetro para que a repetição pare."</p>
+                        
+                        <label class="alternativas"><input type="radio" name="questao3" > Verdadeiro</label><br>
+                        <label class="alternativas"><input type="radio" name="questao3" > Falso</label><br>
+                        
+
+                        <p class="enunciado">4. Marque a alternativa falsa de acordo com o exemplo utilizado na video aula 2.<br> De quais formas a variável <spam>senha</spam> é utilizada no programa de exemplo da aula:
+                        </p>
+                        <label class="alternativas"><input type="radio" name="questao4" > a) Serve de parâmetro para comparar o valor da senha correta e da senha informada.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao4" > b) Guarda o valor correto da senha.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao4" > c) Apaga o valor da variável <spam>pass</spam> e substitui pelo seu valor.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao4" > d) Faz parte da condição definida como parâmetro para a repetição WHILE.</label><br>
+
+                        <p class="enunciado">5.	Marque a alternativa correta. O símbolo utilizado para comparar os valores da variável <spam>senha</spam> e <spam>pass</spam> significa que esses valores tem que ser:</p>
+                        <label class="alternativas"><input type="radio" name="questao5" > a) EQUIVALENTES.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao5" > b) DIFERENTES.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao5"> c)	IGUAIS.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao5" > d) CONCORRENTES.</label><br>
+
+                        <div class="line">
+                            <div class="col-g-9">
+                                <input type="button" value="Conferir" class="botoes" onclick="armazenarRespostas()">
+
+                                <input type="reset" value="Limpar" class="botoes">
+                            </div>
+                            <div class="col-g-3">
+
+
+                                <a class="cursos" href="../matapoio/matapoioIngles1.pdf" download="Material de apoio de Inglês - aula 1">Material de apoio</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <!-- RODAPÉ DA PÁGINA -->
+        <div class="line">
+           <div class="tamanho">
+            <div class="col-g-3 col-m-4">
+                <h5>Mapa do site</h5>
+                <ul>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#somos">Quem Somos</a></li>
+                    <li><a href="#">Material de apoio</a></li>
+                    <li><a href="#opinioes">Opiniões</a></li>
+                    <li><a href="javascript:void(0)" onClick="MM_openBrWindow('faleconosco.html','','scrollbars=no, width=450, height=460, left=0, top=0')">Fale Conosco</a></li>
+                </ul>
+            </div>
+            <div class="col-g-3 col-m-4">
+                <h5> Sobre nosso Projeto!</h5>
+                    <p>Este website foi desenvolvido por alunos do 1° Período do curso de Sistemas para Internet da Instituição Federal do Triângulo Mineiro<br>O objetivo deste projeto é integrar as disciplinas cursadas no inicio do curso a fim de integralizar os conhecimentos obtidos e fazer valer a proposta de inter-disciplinaridade durante a graduação, além de, por em prática tudo aquilo que aprendemos no decorrer do semestre.</p>
+            </div>
+            <div class="col-g-3 col-m-4">
+            <a href="http://www.iftm.edu.br/uberlandiacentro/" target="_blank"><img src="../imagens/IFTM_logo.01.png" alt="Logo do IFTM" class="logoiftm"></a>
+        </div>
+
+        <div class="col-g-3 col-m-12">
+           <h5>Nos encontre nas midias sociais</h5>
+           <ul>
+           <li class="midia"><a href="http://www.youtube.com" class="youtube"></a></li>
+           <li class="midia"><a href="#" class="gmail"></a></li>
+           <li class="midia"><a href="#" class="instagram"></a></li>
+           <li class="midia"><a href="#" class="facebook"></a></li>
+            </ul>
+        </div>
+
+       
+        </div>
+        </div>
+        
+        </footer>
+</body>
+
+</html>

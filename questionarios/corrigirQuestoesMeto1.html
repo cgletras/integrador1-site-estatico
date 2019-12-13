@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .invisivel {
+            visibility: hidden;
+        }
+
+        .visivel {
+            visibility: visible;
+        }
+
+    </style>
+    <script>
+        function lerQuestoes() {
+            // Gabarito das questoes
+            // Questao 1: letra a (no nosso caso e o numero 1)
+            // Questao 2: letra d (no nosso caso e o numero 4)
+            // Questao 3: letra c (no nosso caso e o numero 3)
+            gabarito = [3, 2, 1, 4, 1]
+            nroQuestoes = gabarito.length
+
+            // Vetor que ira conter as respostas das questoes
+            respUser = []
+
+            // Le as respostas do usuario e armazena-as no vetor "respUser"
+            for (i = 0; i < nroQuestoes; i++)
+                respUser[i] = localStorage.getItem("questao" + (i + 1))
+
+            // Verificar o percentual de acerto das questoes
+            acertos = 0;
+            for (i = 0; i < nroQuestoes; i++)
+                if (gabarito[i] == respUser[i]) acertos++;
+
+            percentualAcertos = acertos / nroQuestoes * 100;
+
+            if (percentualAcertos >= 60) {
+                document.getElementById("msgAproveitamento").innerHTML = "Seu aproveitamento foi de " + percentualAcertos.toFixed(1) + "%. Informe o seu nome abaixo para emissão do certificado.";
+                document.getElementById("formNome").className = "visivel";
+                localStorage.setItem("perc", percentualAcertos);
+            } else {
+                document.getElementById("msgAproveitamento").innerHTML = "Seu aproveitamento foi de " + percentualAcertos.toFixed(1) + "%. É necessário obter pelo menos 60% para emissão do certificado."
+            }
+        }
+
+        function gerarCertificado() {
+            nomeCursista = document.getElementById("txtNome").value;
+            localStorage.setItem("nome", nomeCursista);
+            window.open("../certificado/verCertificadoMeto1.html", "_self")
+        }
+
+    </script>
+</head>
+
+<body onload="lerQuestoes()">
+    <p id="msgAproveitamento"></p>
+    <form id="formNome" class="invisivel">
+        <label>Nome: </label>
+        <input id="txtNome" type="text" maxlength="35">
+        <input type="button" value="Gerar certificado" onclick="gerarCertificado()">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Skynet Cursos Online | Lapidando conhecimentos</title>
+    <link rel="stylesheet" href="../estilos/questoes.css" type="text/css">
+    <link rel="stylesheet" href="../estilos/responsivo.css" type="text/css">
+    
+    <script>
+        function armazenarRespostas() {
+            questoesMarcadas = 0;
+            nroQuestoes = 5;
+
+
+            for (nroQ = 1; nroQ < (nroQuestoes + 1); nroQ++) {
+                questao = document.getElementsByName("questao" + nroQ)
+                for (i = 0; i < questao.length; i++) {
+                    if (questao[i].checked == true) {
+                        questoesMarcadas++;
+                        localStorage.setItem("questao" + nroQ, i + 1);
+                        break;
+                    }
+                }
+            }
+            if (questoesMarcadas == nroQuestoes)
+                window.open("corrigirQuestoesIng1.html", "_self");
+            else
+                alert("É necessário marcar todas as questões ...")
+        }
+        
+        function MM_openBrWindow(theUrl, winName, features) {
+            window.open(theUrl, winName, features);
+        }
+        
+    </script>
+    <style>
+    
+        section img {
+            width: 100%;
+            margin: 30px 15px 30px 0px;
+            border-radius: 30px;
+            background-color: rgba(118, 237, 228, 0.1);
+            box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.18);
+            padding: 10px;
+        }
+    
+    
+    </style>
+</head>
+
+<body>
+    <!-- CABEÇALHO DA PÁGINA -->
+    <header>
+        <div class="tamanho">
+            <li class="left"><a href="../index.html">Home</a></li>
+
+            <nav class="right">
+                <ul>
+                    <li><a href="../index.html#cursos">Cursos</a></li>
+                    <li><a href="../index.html#somos">Quem Somos</a></li>
+                    <li><a href="../index.html#opinioes">Opiniões</a></li>
+                    <li><a href="javascript:void(0)" onClick="MM_openBrWindow('../faleconosco.html','','scrollbars=no, width=450, height=460, left=0, top=0')">Fale Conosco</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <section>
+        <!-- Questionário -->
+        <article>
+            <h1>Exercicios de Inglês Instrumental</h1>
+            <h3>1° Video Aula</h3>
+        </article>
+        <div class="tamanho">
+            <div class="line">
+                <p class="cursos">Agora que você assistiu a video-aula é a hora de testar seus conhecimentos, depois de responder esse questionário voce terá a change de conseguir on certificado! Para isto basta somente acertar 60% das questões!</p>
+                <p class="cursos">Boa sorte e bons estudos!</p>
+            </div>
+            <div class="line">
+                <div class="col-g-12">
+
+                    <form>
+                        <p class="enunciado">1. O que quer dizer o termo Skimming estudado na ultima atividade? Marque a alternativa verdadeira. É correto dizer que o termo descreve: </p>
+                        <label class="alternativas"><input type="radio" name="questao1"> a)	... Um sujeito com a habilidade de Esquiar.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao1" > b) ... Uma habilidade usada na escrita de um texto.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao1"> c)	... Uma estratégia de leitura para o entendimento do significado profundo das palavras em texto.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao1" > d) ... Uma estratégia de leitura para o entendimento do significado superficial dos elementos que compõe um texto.</label><br>
+
+
+
+                        <p class="enunciado">2. O que quer dizer o termo Scanning, ao ser definido dentro dos estudos de inglês instrumental, que foi estudado na ultima atividade? Marque a alternativa incorreta.</p>
+                        <label class="alternativas"><input type="radio" name="questao2" > a)	É uma técnica de leitura descrita no estudo de Inglês instrumental.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao2" > b)	É uma estratégia utilizada para localizar determinadas informações em um texto, imagem, etc...</label><br>
+                        <label class="alternativas"><input type="radio" name="questao2"> c)	É um método no ensino de inglês que permite ao aluno “Scannear” exercícios em sala usando um Scanner.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao2" > d)	Os itens “a)” e “b)” acima estão corretos.</label><br>
+                        
+                        <p class="enunciado">3. Ao ler o texto da figura nesta página, utilizando a estratégia SKIMING, você percebe que o texto fala de uma escola, pois existem fotos de uma escola no folheto.</p>
+                         <div class="col-g-7">
+                        <label class="alternativas"><input type="radio" name="questao3" > a) Verdadeiro</label><br>
+                        <label class="alternativas"><input type="radio" name="questao3" > b)	Falso</label><br>
+                      
+                        <p class="enunciado">4. A professora Samira lhe entregou o texto ao lado e perguntou: “Esse texto fala sobre o uniforme da escola?”. Qual estratégia você utiliza para procurar essa informação no texto.
+                        </p>
+                        <label class="alternativas"><input type="radio" name="questao4" > a)	SKIMMING</label><br>
+                        <label class="alternativas"><input type="radio" name="questao4" > b)	SCANNING</label><br>
+                        
+                        
+                            <p class="enunciado">5. O texto ao lado apresenta qual a diferença entre o uniforme de meninos e meninas? Marque a alternativa verdadeira:<br><br> O texto apresenta os uniformes de ambos mas...</p>
+                            <label class="alternativas"><input type="radio" name="questao5" > a)	... os uniformes e as cores são iguais;</label><br>
+                            <label class="alternativas"><input type="radio" name="questao5" > b)	... os calçados são sempre os mesmos para os dois;</label><br>
+                            <label class="alternativas"><input type="radio" name="questao5"> c)	... a cor da blusa é diferente para meninos e meninas</label><br>
+                            <label class="alternativas"><input type="radio" name="questao5" > d)	... nenhuma das alternativas acima esta certa.</label><br>
+                        </div>
+                        <div class="col-g-5 right">
+                        <img src="../imagens/textoIng.png" alt="Imagem de escolas e texto">
+                        </div>
+                        <div class="line">
+                            <div class="col-g-9">
+                                <input type="button" value="Conferir" class="botoes" onclick="armazenarRespostas()">
+
+                                <input type="reset" value="Limpar" class="botoes">
+                            </div>
+                            <div class="col-g-3">
+
+
+                                <a class="cursos" href="../matapoio/matapoioIngles1.pdf" download="Material de apoio de Inglês - aula 1">Material de apoio</a>
+                            </div>
+
+
+                        </div>
+
+                    </form>
+
+
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+<footer>
+        <!-- RODAPÉ DA PÁGINA -->
+        <div class="line">
+           <div class="tamanho">
+            <div class="col-g-3 col-m-4">
+                <h5>Mapa do site</h5>
+                <ul>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#somos">Quem Somos</a></li>
+                    <li><a href="#">Material de apoio</a></li>
+                    <li><a href="#opinioes">Opiniões</a></li>
+                    <li><a href="javascript:void(0)" onClick="MM_openBrWindow('faleconosco.html','','scrollbars=no, width=450, height=460, left=0, top=0')">Fale Conosco</a></li>
+                </ul>
+            </div>
+            <div class="col-g-3 col-m-4">
+                <h5> Sobre nosso Projeto!</h5>
+                    <p>Este website foi desenvolvido por alunos do 1° Período do curso de Sistemas para Internet da Instituição Federal do Triângulo Mineiro<br>O objetivo deste projeto é integrar as disciplinas cursadas no inicio do curso a fim de integralizar os conhecimentos obtidos e fazer valer a proposta de inter-disciplinaridade durante a graduação, além de, por em prática tudo aquilo que aprendemos no decorrer do semestre.</p>
+            </div>
+            <div class="col-g-3 col-m-4">
+            <a href="http://www.iftm.edu.br/uberlandiacentro/" target="_blank"><img src="../imagens/IFTM_logo.01.png" alt="Logo do IFTM" class="logoiftm"></a>
+        </div>
+
+        <div class="col-g-3 col-m-12">
+           <h5>Nos encontre nas midias sociais</h5>
+           <ul>
+           <li class="midia"><a href="http://www.youtube.com" class="youtube"></a></li>
+           <li class="midia"><a href="#" class="gmail"></a></li>
+           <li class="midia"><a href="#" class="instagram"></a></li>
+           <li class="midia"><a href="#" class="facebook"></a></li>
+            </ul>
+        </div>
+
+       
+        </div>
+        </div>
+        
+        </footer>
+</body>
+
+</html>

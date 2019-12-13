@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    function armazenarRespostas() {
+      questoesMarcadas = 0;
+      nroQuestoes = 5;
+      for (nroQ=1; nroQ<(nroQuestoes+1); nroQ++) {
+        questao = document.getElementsByName("questao"+nroQ)  
+        for (i=0; i<questao.length; i++) {
+          if (questao[i].checked == true) {
+            questoesMarcadas++;
+            localStorage.setItem("questao"+nroQ,i+1);
+            break;
+          }
+        }  
+      }
+      if (questoesMarcadas == nroQuestoes)
+        window.open("corrigirQuestoes.html","_self");
+      else
+        alert("É necessário marcar todas as questões ...")
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <p>Questão 1:</p>
+    <label><input type="radio" name="questao1"> Resposta 1</label><br>
+    <label><input type="radio" name="questao1"> Resposta 2</label><br>
+    <label><input type="radio" name="questao1"> Resposta 3</label><br>
+    <label><input type="radio" name="questao1"> Resposta 4</label><br>
+
+    <p>Questão 2:</p>
+    <label><input type="radio" name="questao2"> Resposta 1</label><br>
+    <label><input type="radio" name="questao2"> Resposta 2</label><br>
+    <label><input type="radio" name="questao2"> Resposta 3</label><br>
+    <label><input type="radio" name="questao2"> Resposta 4</label><br>
+
+    <p>Questão 3:</p>
+    <label><input type="radio" name="questao3"> Resposta 1</label><br>
+    <label><input type="radio" name="questao3"> Resposta 2</label><br>
+    <label><input type="radio" name="questao3"> Resposta 3</label><br>
+    <label><input type="radio" name="questao3"> Resposta 4</label><br>
+    
+    <p>Questão 4:</p>
+    <label><input type="radio" name="questao4"> Resposta 1</label><br>
+    <label><input type="radio" name="questao4"> Resposta 2</label><br>
+    <label><input type="radio" name="questao4"> Resposta 3</label><br>
+    <label><input type="radio" name="questao4"> Resposta 4</label><br>
+    
+    <p>Questão 5:</p>
+    <label><input type="radio" name="questao5"> Resposta 1</label><br>
+    <label><input type="radio" name="questao5"> Resposta 2</label><br>
+    <label><input type="radio" name="questao5"> Resposta 3</label><br>
+    <label><input type="radio" name="questao5"> Resposta 4</label><br>
+          
+    
+    <br><input type="button" value="Conferir" onclick="armazenarRespostas()">
+    <input type="reset" value="Limpar">
+    
+  </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

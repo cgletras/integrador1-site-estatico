@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="cursos online, projeto integrador, webdesign">
+    <meta name="author" content="skynetcursos">
+    <meta name="developer" content="cg.gt.e.ea">
+    <meta name="description" content="Esta página é parte do projeto integrador do cursos de de tecnologia para internet da IFTM Uberlandia - centro">
+    <meta name="reply-to" content="skynetcursos@gmail.com">
+    <meta name="robots" content="noindex,nofollow">
+
+    <title>Skynet Cursos Online | Lapidando conhecimentos</title>
+    <link rel="stylesheet" href="../estilos/video.css">
+    <link rel="stylesheet" href="../estilos/certificado.css">
+    <link rel="stylesheet" href="../estilos/responsivo.css">
+    
+    <script>
+        function lerNome() {
+            nomeCursista = localStorage.getItem("nome")
+            document.getElementById("nomeCursista").innerHTML = nomeCursista
+        }
+        
+        function lerPerc() {
+            perc = localStorage.getItem("perc")
+            document.getElementById("perc").innerHTML = perc
+        }
+        
+        function MM_openBrWindow(theUrl, winName, features) {
+            window.open(theUrl, winName, features);
+        }
+
+    </script>
+    
+</head>
+
+<body onload="lerNome(), lerPerc()">
+   <header>
+        <div class="tamanho">
+            <li class="left"><a href="../index.html">Home</a></li>
+
+            <nav class="right">
+                <ul>
+                    <li><a href="../index.html#cursos">Cursos</a></li>
+                    <li><a href="../index.html#somos">Quem Somos</a></li>
+                    <li><a href="../index.html#opinioes">Opiniões</a></li>
+                    <li><a href="javascript:void(0)" onClick="MM_openBrWindow('../faleconosco.html','','scrollbars=no, width=450, height=460, left=0, top=0')">Fale Conosco</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="line"></div>
+        </div>
+    </header>
+    <div class="certificado">
+        <p id="nomeCursista" class="nome"></p>
+        <p id="perc" class="percCert"></p>
+        <p class="disciplina">Lógica de programação - Aula 1</p>
+    </div>
+</body>
+
+</html>

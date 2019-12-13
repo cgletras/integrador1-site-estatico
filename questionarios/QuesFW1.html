@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Skynet Cursos Online | Lapidando conhecimentos</title>
+   <link rel="stylesheet" href="../estilos/questoes.css" type="text/css">
+    <script>
+        function armazenarRespostas() {
+            questoesMarcadas = 0;
+            nroQuestoes = 5;
+            for (nroQ = 1; nroQ < (nroQuestoes + 1); nroQ++) {
+                questao = document.getElementsByName("questao" + nroQ)
+                for (i = 0; i < questao.length; i++) {
+                    if (questao[i].checked == true) {
+                        questoesMarcadas++;
+                        localStorage.setItem("questao" + nroQ, i + 1);
+                        break;
+                    }
+                }
+            }
+            if (questoesMarcadas == nroQuestoes)
+                 window.open("corrigirQuestoesFW1.html","_self");
+            else
+                alert("É necessário marcar todas as questões ...")
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- CABEÇALHO DA PÁGINA -->
+    <header>
+        <div class="tamanho">
+            <li class="left"><a href="index.html">Home</a></li>
+
+            <nav class="right">
+                <ul>
+                    <li><a href="index.html#cursos">Cursos</a></li>
+                    <li><a href="matapoio.html">Material de Apoio</a></li>
+                    <li><a href="questionarios.html">Questionários</a></li>
+                    <li><a href="indexotimizada.html#somos">Quem Somos</a></li>
+                    <li><a href="indexotimizada.html#opinioes">Opiniões</a></li>
+                    <li><a href="javascript:void(0)" onClick="MM_openBrWindow('faleconosco.html','','scrollbars=no, width=450, height=460, left=0, top=0')">Fale Conosco</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <section>
+        <!-- Questionário -->
+        <article>
+            <h1>Exercicios Fundamentos de Web Design I</h1>
+            <h3>1° Video Aula</h3>
+        </article>
+        <div class="tamanho">
+            <div class="line">
+                <p class="cursos">Agora que você assistiu a video-aula é a hora de testar seus conhecimentos, depois de responder esse questionário voce terá a change de conseguir on certificado! Para isto basta somente acertar 60% das questões!</p>
+                <p class="cursos">Boa sorte e bons estudos!</p>
+            </div>
+            <div class="line">
+                <div class="col-g-12">
+
+                    <form>
+                        <p class="enunciado">1.) Qual das seguintes tags não faz parte da composição de uma tabela HTML?</p>
+                        <label class="alternativas"><input type="radio" name="questao1" > th</label><br>
+                        <label class="alternativas"><input type="radio" name="questao1" > table</label><br>
+                        <label class="alternativas"><input type="radio" name="questao1"> hr</label><br>
+                        <label class="alternativas"><input type="radio" name="questao1" > tr</label><br>
+
+
+
+                        <p class="enunciado">2.) Obrigatoriamente, dentro de qual tag uma tabela deve estar inserida?</p>
+                        <label class="alternativas"><input type="radio" name="questao2" > Dentro de uma div</label><br>
+                        <label class="alternativas"><input type="radio" name="questao2" >Dentro do body
+</label><br>
+                        <label class="alternativas"><input type="radio" name="questao2"> Dentro de um p</label><br>
+                        <label class="alternativas"><input type="radio" name="questao2" > Dentro de uma section</label><br>
+
+
+                        <p class="enunciado">3.) Para que uma tabela tenha 3 linhas horizontais, ela deve apresentar:</p>
+                        <label class="alternativas"><input type="radio" name="questao3" > Três th(s)</label><br>
+                        <label class="alternativas"><input type="radio" name="questao3" > Tres tr(s)</label><br>
+                        <label class="alternativas"><input type="radio" name="questao3"> Três td(s)</label><br>
+                        <label class="alternativas"><input type="radio" name="questao3" > Três h1(s)</label><br>
+
+
+                        <p class="enunciado">4.) Para inserir uma cor de fundo vermelha em uma tabela, deve-se utilizar:
+                        </p>
+                        <label class="alternativas"><input type="radio" name="questao4" > table bg-color="red"</label><br>
+                        <label class="alternativas"><input type="radio" name="questao4" > table background color="red"
+</label><br>
+                        <label class="alternativas"><input type="radio" name="questao4"> table color="red</label><br>
+                        <label class="alternativas"><input type="radio" name="questao4" > table bgcolor="red"></label><br>
+
+
+                        <p class="enunciado">5.) Utilizando o plugin Emmet no editor Brackets, qual comando se usa para criar o
+esqueleto de uma página?</p>
+                        <label class="alternativas"><input type="radio" name="questao5" > ! + Tab</label><br>
+                        <label class="alternativas"><input type="radio" name="questao5" > 1 + Tab
+</label><br>
+                        <label class="alternativas"><input type="radio" name="questao5"> Tab + !
+</label><br>
+                        <label class="alternativas"><input type="radio" name="questao5" > 1 + Tab</label><br>
+                        <div class="line">
+                            <div class="col-g-10">
+                                <input type="button" value="Conferir" class="botoes" onclick="armazenarRespostas()">
+
+                                <input type="reset" value="Limpar" class="botoes left">
+                            </div>
+                            <div class="col-g-2">
+
+
+                                <a class="cursos" href="../matapoio/matapoioFWD1.pdf" download="ArquiteturaVideo1">Material de apoio</a>
+                            </div>
+
+
+                        </div>
+
+                    </form>
+
+
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <footer>
+        <!-- RODAPÉ DA PÁGINA -->
+        <div class="line">
+            <div class="tamanho">
+                <div class="col-g-12">
+                    <div class=col-g-3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus repudiandae voluptatum cupiditate culpa earum magnam harum facilis molestias, velit illo quaerat quidem ipsa rerum veniam modi necessitatibus dolorum, tempore rem?</p>
+                    </div>
+                    <div class=col-g-3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus repudiandae voluptatum cupiditate culpa earum magnam harum facilis molestias, velit illo quaerat quidem ipsa rerum veniam modi necessitatibus dolorum, tempore rem?</p>
+                    </div>
+                    <div class=col-g-3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus repudiandae voluptatum cupiditate culpa earum magnam harum facilis molestias, velit illo quaerat quidem ipsa rerum veniam modi necessitatibus dolorum, tempore rem?</p>
+                    </div>
+                    <div class=col-g-3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus repudiandae voluptatum cupiditate culpa earum magnam harum facilis molestias, velit illo quaerat quidem ipsa rerum veniam modi necessitatibus dolorum, tempore rem?</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

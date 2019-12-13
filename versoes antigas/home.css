@@ -1,0 +1,397 @@
+ body {
+            font-size: 35px;
+        }
+
+        * {
+            margin: 0px;
+            font-family: Play;
+            box-sizing: border-box;
+       
+        }
+
+        header {
+            background-image: url(imagens/topo.jpg);
+            background-attachment: fixed;
+            text-shadow: 2px 2px 3px black;
+            padding-bottom: 40px;
+            
+        }
+
+        .home {
+            float: left;
+            padding-top: 50px;
+        }
+
+        .menutopo {
+            float: right;
+            padding-top: 50px;
+        }
+
+        ul {
+            list-style: none;
+            text-align: right;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        li {
+            display: inline-block;
+
+        }
+
+        ul a:link,
+        ul a:visited,
+        li a {
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            padding: 5px 10px;
+            transition: 0.7s;
+            font-size: 50%;
+                        
+        }
+        
+        a.linkAula {
+            font-size: 50%;
+            text-decoration: none;
+            transition: 0.7s;
+            color: #5b84d1;
+            
+        }
+                
+        .clear {
+            clear: both;
+        }
+
+        header h1 {
+
+            color: white;
+            text-align: center;
+            margin: 100px;
+            transition: 0.7s;
+            font-size: 150%;
+        }
+
+        header p {
+            text-align: center;
+            color: white;
+            font-size: 60%;
+        }
+
+        .caixa {
+            border-right: 1px solid black;
+            width: 100%;
+            padding-right: 10px;
+            margin-top: 20px;
+            transition: 0.7s;
+        }
+
+        .caixadireita {
+            border-left: 1px solid black;
+            padding-left: 10px;
+            width: 100%;
+            margin-top: 20px;
+            transition: 0.7s;
+        }
+
+        .margem {
+            margin-left: 175px;
+        }
+
+        .segundoarticle {
+            background-color: rgba(44, 155, 201, 0.78);
+            margin-top: 50px;
+
+        }
+
+        h2.section {
+            text-align: center;
+            margin: 45px;
+            font-size: 120%;
+            text-shadow: 2px 2px 5px #5b84d1;
+        }
+
+        h3 {
+            padding: 10px;
+            font-size: 80%;
+            text-shadow: 2px 2px 5px #5b84d1;
+        }
+
+
+        .tituloarticle2 {
+            text-align: center;
+            padding-top: 40px;
+            font-size: 120%;
+
+        }
+
+        .paragrafos {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .caixafotos {
+
+            border: 1px solid rgba(0, 0, 0, 0.31);
+            width: 100%;
+            padding: 30px;
+            margin: 10px;
+
+        }
+
+        .pcaixa {
+            text-align: center;
+            padding: 5px;
+        }
+
+        .fotocaixa {
+            margin: 15px;
+            border-radius: 150px;
+            width: 200px;
+            height: 190px;
+            background-image: url(imagens/foto1.jpg);
+            background-position: center;
+            background-size: 100%;
+            box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.54);
+            
+        }
+
+        .edu {
+            background-image: url(imagens/foto1.jpg);
+        }
+        
+        .cg {
+            background-image: url(imagens/cg.jpg);
+        }
+
+        .manu {
+            background-image: url(imagens/manu.jpg);
+        }
+
+        .gui {
+            background-image: url(imagens/guilherme.jpg);
+        }
+
+
+        [class^="col-"] {
+            float: left;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 24.99%;
+        }
+
+        .col-4 {
+            width: 33.32%;
+        }
+
+        .col-5 {
+            width: 41.65%;
+        }
+
+        .col-6 {
+            width: 49.98%;
+        }
+
+        .col-7 {
+            width: 58.31%;
+        }
+
+        .col-8 {
+            width: 66.64%;
+        }
+
+        .col-9 {
+            width: 74.97%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.63%;
+        }
+
+        .col-12 {
+            width: 100.00%;
+        }
+
+        [class^="col-"] {
+            float: left;
+            text-align: center;
+            padding: 5px;
+        }
+
+
+        .linha::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+
+        div.tamanho {
+            width: 1200px;
+            margin: 0 auto;
+
+        }
+
+        li a:hover {
+            color: #5ccbf8;
+            border-radius: 40px 40px 40px 40px;
+            background-color: rgba(117, 179, 232, 0.10);
+            
+        }
+        
+        a.linkAula:hover {
+            color: #5ccbf8;
+        }
+
+        header h1:hover {
+            color: #5ccbf8;
+        }
+
+        .caixa:hover,
+        .caixadireita:hover {
+            background-color: rgba(92, 203, 248, 0.3);
+            transform: translatey(-5%);
+            border-radius: 40px 40px 40px 40px;
+            
+        }
+        
+        section p {
+            font-size: 60%;
+            padding: 10px;
+        }
+        
+        @media screen and (max-width: 1200px) {
+         
+            div.tamanho {
+                width: 80%;
+                margin: 0 auto;
+            }
+            
+            body {
+                font-size: 35px;
+            }
+        }
+        @media screen and (max-width: 640px){
+            
+             [class^="col-"] {
+           width: 100%;
+            text-align: center;
+            padding: 5px;
+        }
+       
+            
+        .fotocaixa {
+            margin: auto;
+            border-radius: 150px;
+            width: 200px;
+            height: 190px;
+            background-position: center;
+            background-size: 100%;
+            box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.54);
+            
+        }
+        }
+        @media screen and (min-width: 640px) and (max-width: 1280px){
+               
+             [class^="col-"] {
+           width: 50%;
+                 float: left;
+            text-align: center;
+            padding: 5px;
+        }
+        *{
+                font-size: 100%;
+            }
+            
+        .fotocaixa {
+            margin: auto;
+            border-radius: 150px;
+            width: 200px;
+            height: 190px;
+            background-position: center;
+            background-size: 100%;
+            box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.54);
+            
+        }   
+        }
+        .caixaopiniao{
+            width: auto;
+            height: auto;
+            padding: 15px;
+            border: 1px solid black;
+            border-radius: 100px;
+        }
+        .imgopiniao{
+            height: 200px;
+            width: 200px;
+            padding-top: 10px;
+        }
+        footer{
+        margin-top: 100px;
+         background-color: rgba(44, 155, 201, 0.78);
+           
+     
+        }
+        footer li.rodape{
+            font-size: 15px;
+            padding: 10px;
+           
+            
+        }
+        footer ul.rodape{
+            text-align: center;  
+            padding-bottom: 10px;
+           
+        }
+        footer p{
+            text-align: center;
+            font-size: 20px;
+            padding-top: 10px;
+            border-top: 1px dashed black;
+        }
+        .fale{
+            text-align: center;
+            border: 0px;
+            font-size: 15px;
+            
+        }
+        .faleconosco{
+            font-size: 20px;
+        }
+        .borda{
+            border-top: 1px dashed black;
+        }
+        .skynet{
+            width: 100px;
+            height: 100%;
+            padding-top: 50px;
+           
+            
+        }
+        .skynetp{
+             font-size: 13px;
+        }
+        a:link.email, a:visited.email{
+            color: black;
+            text-decoration: none;
+            
+        }
+        a:hover.email{
+            
+           color: #5ccbf8;
+        }
+        

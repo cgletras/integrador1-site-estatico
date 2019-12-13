@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title> Skynet</title>
+    <style>
+        body {
+            font-size: 35px;
+        }
+
+        * {
+            margin: 0px;
+            font-family: Play;
+            box-sizing: border-box;
+       
+        }
+
+        header {
+            background-image: url(imagens/topo.jpg);
+            background-attachment: fixed;
+            text-shadow: 2px 2px 3px black;
+            padding-bottom: 40px;
+            
+        }
+
+        .left {
+            float: left;
+            padding-top: 50px;
+        }
+
+        .right {
+            float: right;
+            padding-top: 50px;
+        }
+
+        ul {
+            list-style: none;
+            text-align: right;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        li {
+            display: inline-block;
+
+        }
+
+        ul a:link,
+        ul a:visited,
+        li a {
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            padding: 5px 10px;
+            transition: 0.7s;
+            font-size: 50%;
+                        
+        }
+        
+        a.linkAula {
+            font-size: 50%;
+            text-decoration: none;
+            transition: 0.7s;
+            color: #5b84d1;
+            
+        }
+                
+        .clear {
+            clear: both;
+        }
+
+        header h1 {
+
+            color: white;
+            text-align: center;
+            margin: 100px;
+            transition: 0.7s;
+            font-size: 150%;
+        }
+
+        header p {
+            text-align: center;
+            color: white;
+            font-size: 60%;
+        }
+
+        .caixa {
+            border-right: 1px solid black;
+            width: 100%;
+            padding-right: 10px;
+            margin-top: 20px;
+            transition: 0.7s;
+        }
+
+        .caixadireita {
+            border-left: 1px solid black;
+            padding-left: 10px;
+            width: 100%;
+            margin-top: 20px;
+            transition: 0.7s;
+        }
+
+        .margem {
+            margin-left: 175px;
+        }
+
+        .segundoarticle {
+            background-color: rgba(44, 155, 201, 0.78);
+            margin-top: 50px;
+
+        }
+
+        h2.section {
+            text-align: center;
+            margin: 45px;
+            font-size: 120%;
+            text-shadow: 2px 2px 5px #5b84d1;
+        }
+
+        h3 {
+            padding: 10px;
+            font-size: 80%;
+            text-shadow: 2px 2px 5px #5b84d1;
+        }
+
+
+        .tituloarticle2 {
+            text-align: center;
+            padding-top: 40px;
+            font-size: 120%;
+
+        }
+
+        .paragrafos {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .caixafotos {
+
+            border: 1px solid rgba(0, 0, 0, 0.31);
+            width: 100%;
+            padding: 30px;
+            margin: 10px;
+
+        }
+
+        .pcaixa {
+            text-align: center;
+            padding: 5px;
+        }
+
+        .fotocaixa {
+            margin: 15px;
+            border-radius: 150px;
+            width: 200px;
+            height: 190px;
+            background-image: url(imagens/foto1.jpg);
+            background-position: center;
+            background-size: 100%;
+            box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.54);
+            
+        }
+
+        .edu {
+            background-image: url(imagens/foto1.jpg);
+        }
+        
+        .cg {
+            background-image: url(imagens/cg.jpg);
+        }
+
+        .manu {
+            background-image: url(imagens/manu.jpg);
+        }
+
+        .gui {
+            background-image: url(imagens/guilherme.jpg);
+        }
+
+
+        [class^="col-"] {
+            float: left;
+
+            text-align: center;
+            padding: 5px;
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 24.99%;
+        }
+
+        .col-4 {
+            width: 33.32%;
+        }
+
+        .col-5 {
+            width: 41.65%;
+        }
+
+        .col-6 {
+            width: 49.98%;
+        }
+
+        .col-7 {
+            width: 58.31%;
+        }
+
+        .col-8 {
+            width: 66.64%;
+        }
+
+        .col-9 {
+            width: 74.97%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.63%;
+        }
+
+        .col-12 {
+            width: 100.00%;
+        }
+
+        [class^="col-"] {
+            float: left;
+            text-align: center;
+            padding: 5px;
+        }
+
+
+        .linha::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+
+        div.tamanho {
+            width: 1200px;
+            margin: 0 auto;
+
+        }
+
+        li a:hover {
+            color: #5ccbf8;
+            border-radius: 40px 40px 40px 40px;
+            background-color: rgba(117, 179, 232, 0.10);
+            
+        }
+        
+        a.linkAula:hover {
+            color: #5ccbf8;
+        }
+
+        header h1:hover {
+            color: #5ccbf8;
+        }
+
+        .caixa:hover,
+        .caixadireita:hover {
+            background-color: rgba(92, 203, 248, 0.3);
+            transform: translatey(-5%);
+            border-radius: 40px 40px 40px 40px;
+            
+        }
+        
+        section p {
+            font-size: 60%;
+            padding: 10px;
+        }
+        
+        @media screen and (max-width: 1200px) {
+         
+            div.tamanho {
+                width: 80%;
+                margin: 0 auto;
+            }
+            
+            body {
+                font-size: 35px;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="tamanho">
+            <li class="left"><a href="index3versao.html">Home</a></li>
+
+            <nav class="right">
+                <ul>
+                    <li><a href="aulas.html">Video Aulas</a></li>
+                    <li><a href="matapoio.html">Materiais de Apoio</a></li>
+                    <li><a href="questionarios.html">Questionários</a></li>
+                </ul>
+            </nav>
+            <div class="clear"></div>
+
+            <h1>Skynet</h1>
+            <p>Lapidando conhecimentos<br>Inovando conexões neurais<br>Evoluindo sempre</p>
+
+        </div>
+    </header>
+
+    <section>
+        <article>
+            <div class="tamanho">
+
+                <h2 class="section">Nossos Cursos</h2>
+
+                <div class="linha">
+                    <div class="col-6">
+                        <div class="caixa">
+                            <h3>Lógica de Programação</h3>
+                            <p>O curso de Introdução a Lógica de Programação é fundamental para quem almeja atuar como programador de computadores. Os conhecimentos adquiridos no curso serão base para o aprendizado de outras linguagens de programação, tais como, Java, C, ou JavaScript. Um bom programador é aquele que, antes de conhecer uma linguagem específica e a sua sintaxe, conhece a lógica por trás das operações.</p>
+                            <a href=”#” class="linkAula"><b>Clique aqui para Video Aula</b></a>   
+                        </div>
+                    </div>
+
+
+                    <div class="col-5">
+                        <div class="caixadireita">
+                            <h3>Fundamentos de Web Design</h3>
+                            <p>O Web Designer é o profissional responsável por criar e desenvolver websites, interfaces para sistemas web e páginas na internet de todo tipo, desde redes sociais e páginas de empresas até lojas virtuais. Com este curso, você aprenderá a utilizar as principais ferramentas para a criação e o desenvolvimento de websites. Você terá o conhecimento necessário para elaborar projetos e executar as atividades que a área necessita.</p>
+                            <a href=”#” class="linkAula"><b>Clique aqui para Video Aula</b></a>   
+                        </div>
+                    </div>
+                </div>
+
+                <div class="linha">
+                    <div class="col-6">
+                        <div class="caixa">
+                            <h3>Sistemas Operacionais</h3>
+                            <p>Os sistemas operacionais são os softwares básicos de um computador. Neste curso, será aprofundado aspectos que facilitarão a execução de tarefas que o auxiliarão a instalar, configurar e gerenciar dispositivos de hardware e software, bem como gerenciar arquivos e pastas</p>
+                            <a href=”#” class="linkAula"><b>Clique aqui para Video Aula</b></a>   
+                        </div>
+                    </div>
+
+
+                    <div class="col-5">
+                        <div class="caixadireita">
+                            <h3>Arquitetura e Organização de Computadores</h3>
+                            <p>Arquitetura de um computador. O termo 'Arquitetura de um computador' referese aos atributos de um sistema que são visíveis para o programador. Já o termo 'Organização de um computador' refere-se as unidades operacionais e suas interconexões que implementam as especificações da sua arquitetura.</p>
+                            <a href=”#” class="linkAula"><b>Clique aqui para Video Aula</b></a>   
+                        </div>
+                    </div>
+                </div>
+
+                <div class="linha">
+                    <div class="col-6">
+                        <div class="caixa">
+                            <h3>Metodologia Cientifica</h3>
+                            <p>Metodologia científica é o estudo dos métodos ou dos instrumentos necessários para a elaboração de um trabalho científico. É o conjunto de técnicas e processos empregados para a pesquisa e a formulação de uma produção científica.</p>
+                            <a href=”#” class="linkAula"><b>Clique aqui para Video Aula</b></a>       
+                        </div>
+                    </div>
+
+
+                    <div class="col-6">
+                        <div class="caixadireita">
+                            <h3>Inglês Instrumental</h3>
+                            <p>Inglês instrumental é uma metodologia de aprendizado de uma habilidade específica de forma isolada baseado no (E.S.P.) English for Specific Purpose, que em português quer dizer: Inglês com Objetivos Específicos. No Brasil a habilidade de leitura é a mais utilizada pelo Inglês Instrumental para tradução e interpretação de textos em inglês de forma rápida e efetiva.</p>
+                            <a href=”#” class="linkAula"><b>Clique aqui para Video Aula</b></a>   
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </article>
+
+
+
+        <article class="segundoarticle">
+            <div class="tamanho">
+                <h2 class="tituloarticle2"> Conheça seus Skynets</h2>
+                <p class="paragrafos">Integrantes do Grupo</p>
+                
+                <div class="linha">
+                    <div class="col-3">
+
+                        <div class="caixafotos">
+                            <div class="fotocaixa"></div>
+                            <p class="pcaixa"> Eduardo </p>
+                            <p class="pcaixa">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit saepe, sequi ex aliquam blanditiis numquam autem quos maiores! Iure modi doloremque, sunt perspiciatis. Optio et aspernatur reiciendis in, voluptatum adipisci.</p>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="caixafotos">
+                            <div class="fotocaixa cg"></div>
+                            <p class="pcaixa"> Carlos Gustavo</p>
+                            <p class="pcaixa">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam iure tenetur rem debitis quam, corporis nihil architecto distinctio repudiandae asperiores modi atque, soluta. Placeat et debitis ut fugiat reprehenderit non!</p>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="caixafotos">
+                            <div class="fotocaixa manu"></div>
+                            <p class="pcaixa"> Emanuella</p>
+                            <p class="pcaixa">Auxiliar Adm, 20, estudante de Sistemas Operacionais, gosta muito de viajar, adora um bom video game e na arte da zuera ela da show!</p>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="caixafotos">
+                            <div class="fotocaixa gui"></div>
+                            <p class="pcaixa"> Guilherme</p>
+                            <p class="pcaixa">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint impedit excepturi neque quo iusto, minus voluptas! Incidunt iure facilis velit vitae architecto ea facere, sed veniam, et fugit delectus totam.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </article>
+    </section>
+
+
+</body>
+
+</html>

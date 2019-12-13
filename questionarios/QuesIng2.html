@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Skynet Cursos Online | Lapidando conhecimentos</title>
+    <link rel="stylesheet" href="../estilos/questoes.css" type="text/css">
+    <link rel="stylesheet" href="../estilos/responsivo.css" type="text/css">
+    <script>
+        function armazenarRespostas() {
+            questoesMarcadas = 0;
+            nroQuestoes = 5;
+
+
+            for (nroQ = 1; nroQ < (nroQuestoes + 1); nroQ++) {
+                questao = document.getElementsByName("questao" + nroQ)
+                for (i = 0; i < questao.length; i++) {
+                    if (questao[i].checked == true) {
+                        questoesMarcadas++;
+                        localStorage.setItem("questao" + nroQ, i + 1);
+                        break;
+                    }
+                }
+            }
+            if (questoesMarcadas == nroQuestoes)
+                window.open("corrigirQuestoesIng2.html", "_self");
+            else
+                alert("É necessário marcar todas as questões ...")
+        }
+        
+        function MM_openBrWindow(theUrl, winName, features) {
+            window.open(theUrl, winName, features);
+        }
+
+    </script>
+
+<style>
+
+    spam {
+        color: #0a890a;
+        font-size: 100%;
+    }
+    
+</style>
+</head>
+
+<body>
+    <!-- CABEÇALHO DA PÁGINA -->
+    <header>
+        <div class="tamanho">
+            <li class="left"><a href="../index.html">Home</a></li>
+
+            <nav class="right">
+                <ul>
+                    <li><a href="../index.html#cursos">Cursos</a></li>
+                    <li><a href="../index.html#somos">Quem Somos</a></li>
+                    <li><a href="../index.html#opinioes">Opiniões</a></li>
+                    <li><a href="javascript:void(0)" onClick="MM_openBrWindow('../faleconosco.html','','scrollbars=no, width=450, height=460, left=0, top=0')">Fale Conosco</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <section>
+        <!-- Questionário -->
+        <article>
+            <h1>Exercicios de Inglês Instrumental</h1>
+            <h3>2° Video Aula</h3>
+        </article>
+        <div class="tamanho">
+            <div class="line">
+                <p class="cursos">Agora que você assistiu outra video-aula é a hora de testar seus conhecimentos novamente, depois de responder esse questionário voce terá a change de conseguir mais um certificado! Para isto basta acertar 60% das questões!</p>
+                <p class="cursos">Boa sorte e bons estudos!</p>
+            </div>
+            <div class="line">
+                <div class="col-g-12">
+
+                    <form>
+                        <p class="enunciado">1. Marque a alternativa que demonstra a forma correta de usar o verbo em verde na forma AFIRMATIVA: </p>
+                        <label class="alternativas"><input type="radio" name="questao1"> a)	We don´t <spam>live</spam> in a big city.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao1" > b) We do not <spam>live</spam> in a big city.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao1" > c) Do we <spam>live</spam> in a big city.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao1"> d)	We <spam>live</spam> in a big city.</label><br>
+
+                        <p class="enunciado">2. Marque a alternativa que demonstra a forma correta de usar a frase na forma NEGATIVA:</p>
+                        <label class="alternativas"><input type="radio" name="questao2" > a) Sylvia likes her new school.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao2" > b) Sylvia doesn´t like her new school.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao2"> c)	Sylvia likes not her new school.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao2" > d) Does Sylvia like her new school.</label><br>
+
+                        <p class="enunciado">3. Marque a alternativa que demonstra a forma correta de usar a frase na forma INTERROGATIVA:</p>
+                        <label class="alternativas"><input type="radio" name="questao3" > a)	I have do coffe and toast for breakfast?</label><br>
+                        <label class="alternativas"><input type="radio" name="questao3" > b)	Do we have coffee for breakfast?</label><br>
+                        <label class="alternativas"><input type="radio" name="questao3" > c)	We do have coffee for breakfast?</label><br>
+                        <label class="alternativas"><input type="radio" name="questao3" > d) I dont have coffee for breakfast</label><br>
+
+                        <p class="enunciado">4. Ao conjugar um verbo na terceira pessoa do PLURAL no SIMPLE PRESENT devemos usar forma PLURAL, ou seja, temos que escrever o verbo na sua FORMA plural, como no exemplo:</p><p>"WALK (FORMA SINGULAR) e WALKS (FORMA PLURAL)"<p>Essa afirmação é VERDADEIRA ou FALSA?
+                        </p>
+                        <label class="alternativas"><input type="radio" name="questao4" > a) Verdadeira</label><br>
+                        <label class="alternativas"><input type="radio" name="questao4" > b) Falsa</label><br>
+
+                        <p class="enunciado">5. Marque a alternativa que apresenta a conjugação dos verbos erroneamente. </p>
+                        <label class="alternativas"><input type="radio" name="questao5" > a) Our lessons finish at half past tree.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao5" > b) Martin and Jane go to school together everyday.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao5"> c)	I not watch TV in the evening.</label><br>
+                        <label class="alternativas"><input type="radio" name="questao5" > d) My best friend in this world is Krypto, my Boxer-dog.</label><br>
+
+                        <div class="line">
+                            <div class="col-g-9">
+                                <input type="button" value="Conferir" class="botoes" onclick="armazenarRespostas()">
+
+                                <input type="reset" value="Limpar" class="botoes">
+                            </div>
+                            <div class="col-g-3">
+
+
+                                <a class="cursos" href="../matapoio/matapoioIngles1.pdf" download="Material de apoio de Inglês - aula 1">Material de apoio</a>
+                            </div>
+
+
+                        </div>
+
+                    </form>
+
+
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+<footer>
+        <!-- RODAPÉ DA PÁGINA -->
+        <div class="line">
+           <div class="tamanho">
+            <div class="col-g-3 col-m-4">
+                <h5>Mapa do site</h5>
+                <ul>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#somos">Quem Somos</a></li>
+                    <li><a href="#">Material de apoio</a></li>
+                    <li><a href="#opinioes">Opiniões</a></li>
+                    <li><a href="javascript:void(0)" onClick="MM_openBrWindow('faleconosco.html','','scrollbars=no, width=450, height=460, left=0, top=0')">Fale Conosco</a></li>
+                </ul>
+            </div>
+            <div class="col-g-3 col-m-4">
+                <h5> Sobre nosso Projeto!</h5>
+                    <p>Este website foi desenvolvido por alunos do 1° Período do curso de Sistemas para Internet da Instituição Federal do Triângulo Mineiro<br>O objetivo deste projeto é integrar as disciplinas cursadas no inicio do curso a fim de integralizar os conhecimentos obtidos e fazer valer a proposta de inter-disciplinaridade durante a graduação, além de, por em prática tudo aquilo que aprendemos no decorrer do semestre.</p>
+            </div>
+            <div class="col-g-3 col-m-4">
+            <a href="http://www.iftm.edu.br/uberlandiacentro/" target="_blank"><img src="../imagens/IFTM_logo.01.png" alt="Logo do IFTM" class="logoiftm"></a>
+        </div>
+
+        <div class="col-g-3 col-m-12">
+           <h5>Nos encontre nas midias sociais</h5>
+           <ul>
+           <li class="midia"><a href="http://www.youtube.com" class="youtube"></a></li>
+           <li class="midia"><a href="#" class="gmail"></a></li>
+           <li class="midia"><a href="#" class="instagram"></a></li>
+           <li class="midia"><a href="#" class="facebook"></a></li>
+            </ul>
+        </div>
+
+       
+        </div>
+        </div>
+        
+        </footer>
+</body>
+
+</html>

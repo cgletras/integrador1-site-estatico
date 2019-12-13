@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Skynet Cursos Online | Lapidando conhecimentos</title>
+    <link rel="stylesheet" href="../estilos/questoes.css" type="text/css">
+    <link rel="stylesheet" href="../estilos/responsivo.css" type="text/css">
+    <script>
+        function armazenarRespostas() {
+            questoesMarcadas = 0;
+            nroQuestoes = 5;
+
+
+            for (nroQ = 1; nroQ < (nroQuestoes + 1); nroQ++) {
+                questao = document.getElementsByName("questao" + nroQ)
+                for (i = 0; i < questao.length; i++) {
+                    if (questao[i].checked == true) {
+                        questoesMarcadas++;
+                        localStorage.setItem("questao" + nroQ, i + 1);
+                        break;
+                    }
+                }
+            }
+            if (questoesMarcadas == nroQuestoes)
+                window.open("corrigirQuestoesIng2.html", "_self");
+            else
+                alert("É necessário marcar todas as questões ...")
+        }
+        
+        function MM_openBrWindow(theUrl, winName, features) {
+            window.open(theUrl, winName, features);
+        }
+
+    </script>
+
+<style>
+
+    spam {
+        color: #0a890a;
+        font-size: 100%;
+    }
+    
+</style>
+</head>
+
+<body>
+    <!-- CABEÇALHO DA PÁGINA -->
+    <header>
+        <div class="tamanho">
+            <li class="left"><a href="../index.html">Home</a></li>
+
+            <nav class="right">
+                <ul>
+                    <li><a href="../index.html#cursos">Cursos</a></li>
+                    <li><a href="../index.html#somos">Quem Somos</a></li>
+                    <li><a href="../index.html#opinioes">Opiniões</a></li>
+                    <li><a href="javascript:void(0)" onClick="MM_openBrWindow('../faleconosco.html','','scrollbars=no, width=450, height=460, left=0, top=0')">Fale Conosco</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <section>
+        <!-- Questionário -->
+        <article>
+            <h1>Exercicios de Sistemas Operacionais</h1>
+            <h3>1° Video Aula</h3>
+        </article>
+        <div class="tamanho">
+            <div class="line">
+                <p class="cursos">Depois que você assistiu a vídeo aula, está na hora de testar seus conhecimentos respondendo este questionário. Se você acertar mais de 60% você ganhará um certificado pelo aproveitamento!</p>
+                <p class="cursos">Boa sorte e bons estudos!</p>
+            </div>
+            <div class="line">
+                <div class="col-g-12">
+
+                    <form>
+
+                        <p class="enunciado">Questão 1: “SO de rede deve possuir suporte as operações em rede, isto é, oferecer aplicações locais recursos que estejam localizados em computadores da rede, como arquivos e impressoras.” A qual tipo de Sistema Operacional este trecho se refere?</p>
+                        <label class="alternativas"><input type="radio" name="questao1"> A) Batch</label> <br>
+                        <label class="alternativas"><input type="radio" name="questao1"> B) Distribuido</label> <br>
+                        <label class="alternativas"><input type="radio" name="questao1"> C) Multiusuários</label> <br>
+                        <label class="alternativas"><input type="radio" name="questao1"> D) Rede</label> <br>
+                        <br>
+
+                        <p class="enunciado">Questão 2: Qual tipo de Sistema Operacional é conhecido como “de mesa” voltado ao atendimento do usuário domestico e corporativo, realiza atividades corriqueiras como edição de textos e gráficos e navegação na internet?</p>
+                        <label class="alternativas"><input type="radio" name="questao2"> A) Servidor</label> <br>
+                        <label class="alternativas"><input type="radio" name="questao2"> B) Desktop</label> <br>
+                        <label class="alternativas"><input type="radio" name="questao2"> C) Embarcado</label> <br>
+                        <label class="alternativas"><input type="radio" name="questao2"> D) Distribuído </label> <br>
+                        <br>
+
+                        <p class="enunciado">Questão 3: Qual funcionalidade dos Sistemas Operacionais é conhecido também como gerência de atividades e visa distribuir a capacidade de processamento de forma justa entre as aplicações?</p>
+                        <label class="alternativas"><input type="radio" name="questao3"> A) Gerência de arquivos</label> <br>
+                        <label class="alternativas"><input type="radio" name="questao3"> B) Gerência de dispositivos</label> <br>
+                        <label class="alternativas"><input type="radio" name="questao3"> C) Gerência de processador</label> <br>
+                        <label class="alternativas"><input type="radio" name="questao3">D) Gerência de proteção</label> <br>
+                        <br>
+                        <p class="enunciado">Questão 4: “São programas que facilitam o uso do sistema computacional, fornecendo funcionalidades complementares ao núcleo, como a interface Windows, formatação de disco e mídias, configuração de dispositivos, e outros.” A qual alternativa pertence essa definição?</p>
+                        <label class="alternativas"><input type="radio" name="questao4"> A) Programas utilitários</label> <br>
+                        <label class="alternativas"><input type="radio" name="questao4"> B) Código de Inicialização</label> <br>
+                        <label class="alternativas"><input type="radio" name="questao4"> C) Drivers</label> <br>
+                        <label class="alternativas"><input type="radio" name="questao4"> D) Núcleo</label> <br>
+                        <br>
+                        <p class="enunciado">Questão 5: “Surgiram os primeiros sistemas operacionais, para tentar automatizar as tarefas manuais até então realizadas e as primeiras linguagens de programação, como Assembly e Fortran.” “Surgem as estações de trabalho (workstations) que, apesar de monousuárias, permitem que se executem diversas tarefas concorrentemente, criando o conceito de multitarefa.” Essas duas definições se referem às seguintes fases dos Sistemas Operacionais:</p>
+                        <label class="alternativas"><input type="radio" name="questao5"> A) Quinta Fase: (Atual) e Terceira Fase: (Circuitos Integrados e Multiprogramação)</label> <br>
+                        <label class="alternativas"><input type="radio" name="questao5"> B) Segunda Fase: (Transistores e Sistemas em Lotes (Batch)) e Quarta Fase: (Computadores Pessoais   </label> <br>
+                        <label class="alternativas"><input type="radio" name="questao5"> C) Primeira Fase: (Válvulas e Painéis de Programação) e Quinta Fase: (Atual)</label> <br>
+                        <label class="alternativas"><input type="radio" name="questao5"> D) Quarta Fase: (Computadores Pessoais) e Terceira Fase: (Circuitos Integrados e Multiprogramação)</label> <br>
+                        <br>
+                         <div class="line">
+                            <div class="col-g-9">
+                                <input type="button" value="Conferir" class="botoes" onclick="armazenarRespostas()">
+
+                                <input type="reset" value="Limpar" class="botoes">
+                            </div>
+                            <div class="col-g-3">
+
+
+                                <a class="cursos" href="../matapoio/matapoioSO1.pdf" download="Material de apoio de Sistemas Operacionais- aula 1">Material de apoio</a>
+                            </div>
+
+
+                        </div>
+
+                    </form>
+
+
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+<footer>
+        <!-- RODAPÉ DA PÁGINA -->
+        <div class="line">
+           <div class="tamanho">
+            <div class="col-g-3 col-m-4">
+                <h5>Mapa do site</h5>
+                <ul>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#somos">Quem Somos</a></li>
+                    <li><a href="#">Material de apoio</a></li>
+                    <li><a href="#opinioes">Opiniões</a></li>
+                    <li><a href="javascript:void(0)" onClick="MM_openBrWindow('faleconosco.html','','scrollbars=no, width=450, height=460, left=0, top=0')">Fale Conosco</a></li>
+                </ul>
+            </div>
+            <div class="col-g-3 col-m-4">
+                <h5> Sobre nosso Projeto!</h5>
+                    <p>Este website foi desenvolvido por alunos do 1° Período do curso de Sistemas para Internet da Instituição Federal do Triângulo Mineiro<br>O objetivo deste projeto é integrar as disciplinas cursadas no inicio do curso a fim de integralizar os conhecimentos obtidos e fazer valer a proposta de inter-disciplinaridade durante a graduação, além de, por em prática tudo aquilo que aprendemos no decorrer do semestre.</p>
+            </div>
+            <div class="col-g-3 col-m-4">
+            <a href="http://www.iftm.edu.br/uberlandiacentro/" target="_blank"><img src="../imagens/IFTM_logo.01.png" alt="Logo do IFTM" class="logoiftm"></a>
+        </div>
+
+        <div class="col-g-3 col-m-12">
+           <h5>Nos encontre nas midias sociais</h5>
+           <ul>
+           <li class="midia"><a href="http://www.youtube.com" class="youtube"></a></li>
+           <li class="midia"><a href="#" class="gmail"></a></li>
+           <li class="midia"><a href="#" class="instagram"></a></li>
+           <li class="midia"><a href="#" class="facebook"></a></li>
+            </ul>
+        </div>
+
+       
+        </div>
+        </div>
+        
+        </footer>
+</body>
+
+</html>
+
+
+       
+        </div>
+        </div>
+        
+        </footer>
+</body>
+
+</html>
+

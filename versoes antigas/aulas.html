@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title> Skynet</title>
+    <style>
+        body {
+            font-size: 35px;
+        }
+
+        * {
+            margin: 0px;
+            font-family: Play;
+            box-sizing: border-box;
+
+        }
+
+        header {
+            background-image: url(imagens/topo.jpg);
+            background-attachment: fixed;
+            text-shadow: 2px 2px 3px black;
+
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        ul {
+            list-style: none;
+            text-align: right;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        li {
+            display: inline-block;
+
+        }
+
+        ul a:link,
+        ul a:visited,
+        li a {
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            padding: 5px 10px;
+            transition: 0.7s;
+            font-size: 50%;
+
+        }
+
+        .caixa>a,
+        .caixadireita>a {
+            font-size: 50%;
+            text-decoration: none;
+            transition: 0.7s;
+            color: #5b84d1;
+
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .caixa {
+            border-right: 1px solid black;
+            width: 100%;
+            padding-right: 10px;
+            margin-top: 20px;
+            transition: 0.7s;
+        }
+
+        .caixadireita {
+            border-left: 1px solid black;
+            padding-left: 10px;
+            width: 100%;
+            margin-top: 20px;
+            transition: 0.7s;
+        }
+
+        .segundoarticle {
+            background-color: rgba(44, 155, 201, 0.78);
+            margin-top: 50px;
+
+        }
+
+        h2.section {
+            text-align: center;
+            margin: 45px;
+            font-size: 120%;
+            text-shadow: 2px 2px 5px #5b84d1;
+        }
+
+        h3 {
+            padding: 20px;
+            font-size: 80%;
+            text-shadow: 2px 2px 5px #5b84d1;
+        }
+
+
+        .tituloarticle2 {
+            text-align: center;
+            padding-top: 40px;
+            font-size: 120%;
+
+        }
+
+        .paragrafos {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .caixafotos {
+
+            border: 1px solid rgba(0, 0, 0, 0.31);
+            width: 100%;
+            padding: 30px;
+            margin: 10px;
+
+        }
+
+        .pcaixa {
+            text-align: center;
+            padding: 5px;
+        }
+
+        .fotocaixa {
+            margin: 15px;
+            border-radius: 150px;
+            width: 200px;
+            height: 190px;
+            background-image: url(imagens/foto1.jpg);
+            background-position: center;
+            background-size: 100%;
+            box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.54);
+
+        }
+
+        .edu {
+            background-image: url(imagens/foto1.jpg);
+        }
+
+        .cg {
+            background-image: url(imagens/cg.jpg);
+        }
+
+        .manu {
+            background-image: url(imagens/manu.jpg);
+        }
+
+        .gui {
+            background-image: url(imagens/guilherme.jpg);
+        }
+
+
+        [class^="col-"] {
+            float: left;
+
+            text-align: center;
+            padding: 5px;
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 24.99%;
+        }
+
+        .col-4 {
+            width: 33.32%;
+        }
+
+        .col-5 {
+            width: 41.65%;
+        }
+
+        .col-6 {
+            width: 49.98%;
+        }
+
+        .col-7 {
+            width: 58.31%;
+        }
+
+        .col-8 {
+            width: 66.64%;
+        }
+
+        .col-9 {
+            width: 74.97%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.63%;
+        }
+
+        .col-12 {
+            width: 100.00%;
+        }
+
+        [class^="col-"] {
+            float: left;
+            text-align: center;
+            padding: 5px;
+        }
+
+
+        .linha::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+
+        div.tamanho {
+            width: 1200px;
+            margin: 0 auto;
+
+        }
+
+        li a:hover {
+            color: #5ccbf8;
+            border-radius: 40px 40px 40px 40px;
+            background-color: rgba(117, 179, 232, 0.10);
+
+        }
+
+        .caixa > a:hover, .caixadireita > a:hover {
+            color: #5ccbf8;
+        }
+
+        .caixa:hover,
+        .caixadireita:hover {
+            background-color: rgba(92, 203, 248, 0.3);
+        }
+
+        section p {
+            font-size: 60%;
+            padding: 10px;
+        }
+
+        @media screen and (max-width: 1200px) {
+
+            div.tamanho {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            body {
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="tamanho">
+            <li class="left"><a href="index3versao.html">Home</a></li>
+
+            <nav class="right">
+                <ul>
+                    <li><a href="aulas.html">Video Aulas</a></li>
+                    <li><a href="matapoio.html">Materiais de Apoio</a></li>
+                    <li><a href="questionarios.html">Questionários</a></li>
+                </ul>
+            </nav>
+            <div class="clear"></div>
+
+        </div>
+    </header>
+
+    <section>
+        <article>
+            <div class="tamanho">
+
+                <h2 class="section">Inglês Instrumental</h2>
+
+                <div class="linha">
+                    <div class="col-6">
+                        <div class="caixa">
+                            <h3>Video Aula 1</h3>
+
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/8cr7TXUcSBk?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+                            <p>Esta primeira aula de inglês instrumental fala sobre os conceitos de SKIMMING and SCANNING utilizados no scoopo desta disciplina. Ela aborda os cenceitos, seus usos e aplicações como tecnica de leitura em inglês.</p>
+                            <a href="index3versao.html"><b>Todas as aulas</b></a><a> - </a>
+                            <a href=”#”><b>Exercicios</b></a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-6">
+                        <div class="caixadireita">
+                            <h3>Video Aula 2</h3>
+
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/AJyuLVdOJe4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+                            <p>Esta video aula fala sobre o "Simple Present" ou Presente simples do Inglês.<br> A aula aborda as regras gramaticais e uso deste tempo verbal, sua forma afirmativa, negativa e interrogativa</p>
+                            <a href="index3versao.html"><b>Todas as aulas</b></a><a> - </a>
+                            <a href=”#”><b>Exercicios</b></a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+    </section>
+
+</body>
+
+</html>
